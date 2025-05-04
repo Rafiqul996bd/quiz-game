@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>বাংলা কুইজ গেম</title>
+  <style>
+    body { font-family: 'Arial'; background: #f1f1f1; text-align: center; padding: 20px; }
+    .quiz-box { background: #fff; border-radius: 10px; padding: 20px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="quiz-box">
+    <h1>স্বরবর্ণ কুইজ</h1>
+    <p id="question">অ এর পর কোন বর্ণ?</p>
+    <button onclick="checkAnswer('আ')">আ</button>
+    <button onclick="checkAnswer('ই')">ই</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function checkAnswer(answer) {
+      const result = document.getElementById("result");
+      if (answer === 'আ') {
+        result.innerHTML = "সঠিক উত্তর!";
+        result.style.color = "green";
+      } else {
+        result.innerHTML = "ভুল উত্তর!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
